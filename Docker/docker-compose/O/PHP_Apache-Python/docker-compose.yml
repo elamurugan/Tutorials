@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  product-services-api:
+    build: ./Python_API
+    volumes:
+      - ./Python_API:/usr/src/app
+    ports:
+      - 5001:80
+
+  PHP_Front:
+    image: php:apache
+    volumes:
+      - ./PHP_Front:/var/www/html
+    ports:
+      - 5000:80
+    depends_on:
+      - product-services-api

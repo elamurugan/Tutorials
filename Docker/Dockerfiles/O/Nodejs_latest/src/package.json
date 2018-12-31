@@ -1,0 +1,15 @@
+{
+	"name": "mynodejscontainertest",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+			"start": "node src/index.js",
+			"start_windows":"start http://127.0.0.1:8888 & node src/index.js",
+			"start_ios":"open http://127.0.0.1:8888 && node src/index.js",
+			"start_linux":"xdg-open http://127.0.0.1:8888 && node src/index.js"
+	},
+	"dependencies": {
+		"express": "~4.16.4",
+		"opn-cli": "4.0.0"
+	}
+}
