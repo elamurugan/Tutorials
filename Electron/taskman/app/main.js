@@ -1,6 +1,7 @@
 const {
   app,
-  BrowserWindow
+  BrowserWindow,
+  Menu
 } = require('electron')
 
 let win
@@ -32,4 +33,4 @@ app.on('activate', () => {
   if (win === null) {
     createWindow()
   }
-})
+});

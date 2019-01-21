@@ -180,7 +180,8 @@ jQuery(document).ready(function () {
     require('popper.js');
     require('bootstrap');
 
-    const remote = require('electron').remote;
+    const {remote} = require('electron');
+    const { Menu, MenuItem } = remote
 
     jQuery(document).on("click",".max-btn", function(e){
         var window = remote.getCurrentWindow();
