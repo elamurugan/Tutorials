@@ -182,6 +182,11 @@ jQuery(document).ready(function () {
 
     const remote = require('electron').remote;
 
+    jQuery(document).on("click",".max-btn", function(e){
+        var window = remote.getCurrentWindow();
+        window.maximize();
+    });
+
     jQuery(document).on("click",".min-btn", function(e){
         var window = remote.getCurrentWindow();
         window.minimize();
